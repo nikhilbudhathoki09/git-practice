@@ -29,6 +29,7 @@ public class Logout extends HttpServlet {
 		
 		if (sess.getAttribute("users")== null && sess.getAttribute("addcarts")== null) {
 			out.println("Logged Out successfully");
+			out.println("The user is sucessfully logged out");
 			response.sendRedirect("View User/home.jsp");
 		}else {
 			out.println("Session is active by : " + sess.getAttribute("users") );
